@@ -1,0 +1,38 @@
+<div *ngIf="(authService.authState$ | async)?.isAuthenticated">
+<h3>add-customer</h3>
+<!-- ;SaveLoanData() -->
+<form [formGroup]="addCustomer" (ngSubmit)="SaveData()">
+    <!-- <div class="mb-3"> -->
+      <!-- <label for="customerId" class="form-label">CustomerId</label> -->
+      <!-- <input type="text"  class="form-control" id="customerId" aria-describedby="customer'sId" placeholder="CustomerId" formControlName="customerId"> -->
+      <!-- <div id="customer'sId" class="form-text">We'll never share your email with anyone else.</div> -->
+    <!-- </div> -->
+    <div class ="mb-3">
+        <label for="customerName" class="form-label">CustomerName</label>
+        <input class="form-control" id="customerName" aria-describedby="customer'sName"  placeholder="CustomerName" formControlName="customerName">
+    </div>
+    <div class="mb-3">
+        <label form="address" class="form-label">customerAddress</label>
+        <input class="form-control" id="address" aria-describedby="customer'sAddress"  placeholder="CustomerAddress" formControlName="address"> 
+    </div>
+    <div class="mb-3">
+        <label form="pan" class="form-label">panNo</label>
+        <input class="form-control" id="pan" aria-describedby="customer'sPanNo"  placeholder="PanNo" formControlName="pan"> 
+    </div>
+
+    <!-- <form [formGroup]="addLoan" (ngSubmit)="SaveLoanData()"> -->
+        <!-- <div class="mb-3">
+            <label form="loanAmount" class="form-label">loanAmount</label>
+            <input class="form-control" id="loanAmount" aria-describedby="loanAmount"  placeholder="LoanAmount" formControlName="loanAmount"> 
+        </div>
+        <div class="mb-3">
+            <label form="loanType" class="form-label">loanType</label>
+            <input class="form-control" id="loanType" aria-describedby="loanType" placeholder="LoanType" formControlName="loanType"> 
+        </div> -->
+        <!-- <button type="submit" class="btn btn-primary">Submit</button>
+      </form> -->
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+<!-- </div> -->

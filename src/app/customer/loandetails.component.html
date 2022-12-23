@@ -1,0 +1,24 @@
+<div *ngIf="(authService.authState$ | async)?.isAuthenticated"> 
+    
+<table class="table" border ="1" style="margin-left: auto;margin-right: auto;"  *ngIf="loan1">
+    <thead>
+      
+        <tr>
+            <th>Loan Id</th>
+            <th>Loan Type</th>
+            <th>Loan Amount</th>
+           
+
+        </tr >
+        <tr >
+<td>{{loan1.loanId}}</td>
+<td>{{loan1.loanType}}</td>
+<td>{{loan1.loanAmount}}</td>
+
+
+
+        </tr>
+    </thead>
+</table>
+<!-- ng add @oktadev/schematics --issuer=dev-88219361.okta.com --clientId=0oa7osdvmwTbvDweq5d7 -->
+</div>

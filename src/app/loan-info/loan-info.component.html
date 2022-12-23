@@ -1,0 +1,19 @@
+<div *ngIf="(authService.authState$ | async)?.isAuthenticated">
+    
+<form [formGroup]="addLoan" (ngSubmit)="SaveLoanData()">
+    <!-- <div class="mb-3">
+        <label for="loanId" class="form-label">LoanId</label>
+        <input type="text"  class="form-control" id="loanId" aria-describedby="loan'sId" placeholder="LoanId" formControlName="customerId">
+         <div id="customer'sId" class="form-text">We'll never share your email with anyone else.</div> 
+      </div> -->
+    <div class="mb-3">
+        <label form="loanAmount" class="form-label">loanAmount</label>
+        <input class="form-control" id="loanAmount" aria-describedby="loanAmount"  placeholder="LoanAmount" formControlName="loanAmount"> 
+    </div>
+    <div class="mb-3">
+        <label form="loanType" class="form-label">loanType</label>
+        <input class="form-control" id="loanType" aria-describedby="loanType" placeholder="LoanType" formControlName="loanType"> 
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
